@@ -2,6 +2,28 @@
 # NX627J: NX627J-user 11 RKQ1.200826.002 nubia.20201029.204053 release-keys
 # dada: dada-user 16 BP2A.250605.015 OS2.0.217.0.WOCMIXM release-keys
 # mojito: mojito-user 12 SKQ1.210908.001 V14.0.9.0.SKGMIXM release-keys
+# violet: violet-user 10-QKQ1.190915.002 V12.5.4.0.QFHCNXM release-keys
+
+# Current blobs with ELF checks disabled:
+# libsns_fastRPC_util, libssc_default_listener, libVDSuperPhotoAPI depend on libsdsprpc and build is unable to resolve its symbols
+# libvidhance have unresolved symbol: __cxa_demangle
+
+# ACDB - from violet
+vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb|9227eef7533d7d0e50f0fb436aea674e9c64a10d
+vendor/etc/acdbdata/IDP/IDP_Codec_cal.acdb|2c3ba336fd6a852619892c1627fead53d84ebc25
+vendor/etc/acdbdata/IDP/IDP_General_cal.acdb|c6c127816342485ad1016b962abbfd87a69f8fce
+vendor/etc/acdbdata/IDP/IDP_Global_cal.acdb|b5df10cfb00b05164a70a6aaa0072297f538b25c
+vendor/etc/acdbdata/IDP/IDP_Handset_cal.acdb|13535bf1a1ac767733889e729a750baca20395b8
+vendor/etc/acdbdata/IDP/IDP_Hdmi_cal.acdb|2fe3895d35dd39b59cba444f0eed515c54ffddee
+vendor/etc/acdbdata/IDP/IDP_Headset_cal.acdb|0de141210d207e57fa9a6a32c245d1302490a0e6
+vendor/etc/acdbdata/IDP/IDP_Speaker_cal.acdb|4d57919157b4218bc6cd3032901285f5a5da30aa
+vendor/etc/acdbdata/IDP/IDP_workspaceFile.qwsp|6da06fc1aad4e46f5673c3d7c6a3856895f5b23a
+vendor/etc/acdbdata/adsp_avs_config.acdb|49baf73cb156bc0e3147d9362d7b5bd6bbfc1f3a
+
+# ACDB loader - from violet
+vendor/lib/libacdb-fts.so|9af886e69983f4673f3cf2f7ea9f5d907320258f
+vendor/lib/libacdbloader.so|06ba70666f83016fe5db7d99f4ba3d14f259e213
+vendor/lib/libacdbrtac.so|5cb9d61b744a0d0d0fdd89f8c24c4ecad689ce41
 
 # ADSP
 vendor/bin/adsprpcd
@@ -21,6 +43,29 @@ vendor/lib64/libcdsprpc_system.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
+# ADSP modules - from violet
+vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so|936d440dc25c049efe71d9fe404b8c141250dcc6
+vendor/lib/rfsa/adsp/dirac_resource.dar|9b5f99fcdf99c866e4c2e7509e43bba1b8334e12
+vendor/lib/rfsa/adsp/libVC1Dec.so|b95d4b6cf40d465a405ff27ceecd49a839ab74f7
+vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so|dcae2a3b11d4b9d32bd77ff62e9f353a8a9c37e6
+vendor/lib/rfsa/adsp/libapps_mem_heap.so|de5ea1c639d93d1a66f43d3d3e8f4e1602c0a83e
+vendor/lib/rfsa/adsp/libcamera_nn_skel.so|29d949909c9f115491b781ff93604be238e0f965
+vendor/lib/rfsa/adsp/libcvpdsp_skel.so|58cbb97212073cf7e4780c6d77a7628c3ee845bd
+vendor/lib/rfsa/adsp/libdirac-capiv2.so|417404af5fc95cbf89cd4eb0b9bd0d6e15aa6f14
+vendor/lib/rfsa/adsp/libdspCV_skel.so|c1ab1b81cd2f2c584aa51e722244c436a0f24f6b
+vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so|481cdec174e77e5cb555d715057170568892a18f
+vendor/lib/rfsa/adsp/libdsp_streamer_binning.so|00eb6acc7c864371b932f95ff98e98351c6508d8
+vendor/lib/rfsa/adsp/libdsp_streamer_skel.so|aee67209556f075cabdb55ddc70d7a76ffc74b3b
+vendor/lib/rfsa/adsp/libfastcvadsp.so|5c86de2533d60534ce5b07e6be13bcf988e4b03b
+vendor/lib/rfsa/adsp/libfastcvdsp_skel.so|50ac955393bfae796e5fcaccad0bd8c90bd5d16a
+vendor/lib/rfsa/adsp/libhexagon_nn_skel.so|29aef8bf76e75de5256c4a31ee021e8bf520d939
+vendor/lib/rfsa/adsp/libhexagon_nn_skel_secondary.so|e622176f7e922d4a85349e8b221ceb6f7763519e
+vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so|637e3c05ff05fb62ff9eede4ba394cd8f1874e18
+vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|44ee517f73908376a226f02a1ecd7ab22e5ae6ca
+vendor/lib/rfsa/adsp/libscveT2T_skel.so|b1c232b8fe7a11754a2f2148d4d2f12496a1dbe1
+vendor/lib/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
+vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
+
 # Alarm
 product/app/PowerOffAlarm/PowerOffAlarm.apk
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
@@ -32,11 +77,23 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 # ANT+
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
+# Audio - from violet
+vendor/lib/btaudio_offload_if.so|f99ff245135e10fd800f3965c90920b4ee8f654d
+vendor/lib/libadiertac.so|30ac3ba28c2b36c19744303387629ba143bcc15e
+vendor/lib/libaudcal.so|a4dc726a873328dabe3dc0b9578959f9d8634a7c
+vendor/lib/libaudioparsers.so|11ad61b7e57e57fe45929a66310c101984c3b341
+vendor/lib/libdrc.so|80297cbca91cc6ef470cd667d003e2b27990ef8e
+vendor/lib/libqtigef.so|23f654b3be361b422d7d36375460d1dac232b350
+vendor/lib/libsurround_3mic_proc.so|9020976e90c2b78bcff5cbd6a913b1de8a436000
+
 # Audio FX modules
 system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
+
+# Audio (speaker amplifier) firmware - from violet
+vendor/firmware/tas2563_uCDSP.bin|ed9bcdebd3f4a4fbd143990f52293a352aa38737
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -52,6 +109,207 @@ vendor/lib64/libbtnv.so
 vendor/lib64/libsoc_helper.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
+
+# Camera - from violet
+vendor/etc/camera/beauty_ui9_intelligent_params.config|2908709d8d008c483e8ea2c992fcd3b2195a2903
+vendor/etc/camera/eyelineblush.cng|f85c3388ab3112ad8963e004c47b131e5d567cca
+vendor/etc/camera/lf_facerank_model.bin|457f91e4027b7faef4d0fa889853e4f692e910c9
+vendor/etc/camera/sdm_ys_32p_120_21_5_perturb50.bin|1ca031d5f8eb0e6aa3eedf7df8d53223b5054bc5
+vendor/etc/camera/vidhance_calibration_F7B|d2f1b893df433fdc2fc32b32063da38824eacbe0
+vendor/etc/scve/facereco/gModel.dat|447e5e3fefe8bcf36db0f7a8595c63fb326879ba
+vendor/lib64/camera/components/GpuKernelRepo.pb|d1c2b0e739da180a84914d123cba68a8334ef7a9
+vendor/lib64/camera/components/com.arcsoft.node.capturebokeh.so|a9a8f67f82b4e6aa08d0361447b5a143d54693ab
+vendor/lib64/camera/components/com.arcsoft.node.hdr.so|9b289ffffbba1ffaab6c306393a286d81e512da0
+vendor/lib64/camera/components/com.arcsoft.node.hdrchecker.so|1e88c264af5add8f6542a5d4d4ad1b1cdea4c65d
+vendor/lib64/camera/components/com.arcsoft.node.realtimebokeh.so|fd70cb6f740f103cf2e6eb06ee0826e4b2b3dd8d
+vendor/lib64/camera/components/com.arcsoft.node.skinbeautifier.so|2857d40a62e9f223882da37dca2b0eac97f0957d
+vendor/lib64/camera/components/com.arcsoft.node.superlowlight.so|40ac579e491ab2f4cbc2c5cfbaecd7183f1cbc34
+vendor/lib64/camera/components/com.qti.camx.chiiqutils.so|e4ebc129412eb69bf59dc3456c3774ea942fa461
+vendor/lib64/camera/components/com.qti.eisv2.so|166420e1a2a2f01d4ef0f59cb99f10d94aec4d2e
+vendor/lib64/camera/components/com.qti.eisv3.so|34bd31ec01369f40f00d156ca53e74f71eb658ae
+vendor/lib64/camera/components/com.qti.hvx.addconstant.so|c6b2ba08367fdbaddfa873cfe8c9b5a1a4da0bb4
+vendor/lib64/camera/components/com.qti.hvx.binning.so|a5bfb2c79f9fab80528a8ba1130cfcd83b90a9c5
+vendor/lib64/camera/components/com.qti.node.aiasd.so|84c321814de308fcc5877c56d493df8a2817fc2b
+vendor/lib64/camera/components/com.qti.node.depth.so|306ea93149d105748eb0468ac098073e9221ccc4
+vendor/lib64/camera/components/com.qti.node.dummyrtb.so|2791283c84eb7df662394387a5ac7c0f8a32d230
+vendor/lib64/camera/components/com.qti.node.dummysat.so|68918978d3e8bb9f796d6f80760f7b9b5368f73e
+vendor/lib64/camera/components/com.qti.node.eisv2.so|b38ae0a6b713b879be8c9eed691aa794318e004a
+vendor/lib64/camera/components/com.qti.node.eisv3.so|2ded4e9aaa4523f0cea887c0b5fa3704b6579482
+vendor/lib64/camera/components/com.qti.node.fcv.so|073ac011373143a8d52e99600af16f87b8fdc6a1
+vendor/lib64/camera/components/com.qti.node.gpu.so|0339e5982a20d03931a6a039c26df2d69bcd91a3
+vendor/lib64/camera/components/com.qti.node.memcpy.so|d4a7e108627cf510ca26c8028f73d5766d20bd89
+vendor/lib64/camera/components/com.qti.node.remosaic.so|fd7b3e6194c008df81fd11c4eac0901bb4ec90dc
+vendor/lib64/camera/components/com.qti.node.sr.so|f7bbdf589bb66556499963b1d2690372166fdcae
+vendor/lib64/camera/components/com.qti.node.stich.so|a1e9e93b7e1673302bb71cfb0a99952b876f636c
+vendor/lib64/camera/components/com.qti.node.swcac.so|4e3e092c09d0f91171f01d6b9e2d441829059705
+vendor/lib64/camera/components/com.qti.node.swregistration.so|1acbac920cd3e5cda07922e246ec98f71fb7639f
+vendor/lib64/camera/components/com.qti.node.xiaomigenderage.so|b858ee5af8d6521697578bf07976bae6ee873173
+vendor/lib64/camera/components/com.qti.stats.aec.so|5f5733acc11f1b1b4594a62c72e9628cbff8cbca
+vendor/lib64/camera/components/com.qti.stats.af.so|cfb93ffaedf1c650dac15399758772d2836f1818
+vendor/lib64/camera/components/com.qti.stats.afd.so|3a12b2710eb7c5a33ec3926ffc866df946ba7d13
+vendor/lib64/camera/components/com.qti.stats.afwrapper.so|4daee0d8923923d9c7f105283bd4bc70ba613637
+vendor/lib64/camera/components/com.qti.stats.asd.so|23d8f717426843914e9cc8be6ceb23b2a3af75e0
+vendor/lib64/camera/components/com.qti.stats.awb.so|fd68d4928df5bfc8cf71f44b93ffe91dc46e6209
+vendor/lib64/camera/components/com.qti.stats.awbwrapper.so|39160d77df28c05c0d4fe8bce87fbb895d97cda5
+vendor/lib64/camera/components/com.qti.stats.haf.so|375fa67290e3cd57646aae4a56a129198e6a4adf
+vendor/lib64/camera/components/com.qti.stats.hafoverride.so|98d75a8197669e1325b5e55251259bec0887bf18
+vendor/lib64/camera/components/com.qti.stats.localhistogram.so|106120181021e05e230b4540313e368a96cb8cfd
+vendor/lib64/camera/components/com.qti.stats.pdlib.so|cb8394239662f9ee37a62f479bb572f900794a48
+vendor/lib64/camera/components/com.qti.stats.pdlibsony.so|d0fb26262eb7aeaa6412cd9bedcc6a943e00b40e
+vendor/lib64/camera/components/com.qti.stats.pdlibwrapper.so|0fc1e32530efb43820f95726e7d2e8e0e032e38d
+vendor/lib64/camera/components/com.qtistatic.stats.aec.so|768f3a8fbd84c3a28553891ce2b354fcf5036dd1
+vendor/lib64/camera/components/com.qtistatic.stats.af.so|853939da18d8d6bfecaf40165995087fdda85bbe
+vendor/lib64/camera/components/com.qtistatic.stats.awb.so|e7ae03bad22d78f366780a63c15d014832e80e50
+vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so|3376705c9ead359aa09cf303431f8dea1d21ed67
+vendor/lib64/camera/components/com.vidhance.node.eis.so|c91596ebeca74b20da16db2d16696492d29e7a2c
+vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so|087d31c18126b87903c79cf5a6daf154c4d37448
+vendor/lib64/camera/components/com.xiaomi.node.mibokeh.so|30c61b777cf4fb01168197befc0faa4c94698523
+vendor/lib64/camera/components/com.xiaomi.node.misegment.so|596de7a416bbd9c34ad4141522897c743707cfec
+vendor/lib64/camera/components/libdepthmapwrapper.so|bded805664f17bc0c10d58bdca2442d6802977da
+vendor/lib64/camera/components/libmmcamera_cac3.so|b5bc46414cb0911dbb290ac638856c04c70701c0
+vendor/lib64/camera/components/model_back.dlc|faeefb05aa0c931edf018e66722d4469cd240483
+vendor/lib64/camera/components/model_front.dlc|0624fa01607686a261fc302ad602ebc9a1f62f60
+vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so|937a9096854d801e56304801e47220d58e297882
+vendor/lib64/camera/com.qti.sensor.imx318.so|02e19f90afe0be716b5b84d0c841ba589d99b295
+vendor/lib64/camera/com.qti.sensor.imx334.so|75cc2ba238cde45091230cfe868dc0ed91a24c14
+vendor/lib64/camera/com.qti.sensor.imx362.so|dce9bd738846d0da7968878b3a77e0c64bec7a91
+vendor/lib64/camera/com.qti.sensor.imx376.so|c508518535aab1a0f99e131df95d334d1fb80435
+vendor/lib64/camera/com.qti.sensor.imx386.so|4d613cb683d63d53b227254f486798230e8eb003
+vendor/lib64/camera/com.qti.sensor.imx476.so|e79a12d1026470c3020b847c7fd27a27d8c6c174
+vendor/lib64/camera/com.qti.sensor.imx519.so|d97f3643d3f524197a9620d2e4e003e751c4022c
+vendor/lib64/camera/com.qti.sensor.imx576.so|dd493a74f75f0c4cb47734e3c21dc4c73041c863
+vendor/lib64/camera/com.qti.sensor.imx577.so|08e0219af900119db4d4b60c57e7c2baf4bbc520
+vendor/lib64/camera/com.qti.sensor.imx586.so|e0a4cf8c0d2465bdb7ece4932d73f6ed7444854c
+vendor/lib64/camera/com.qti.sensor.imx586_factory.so|bcb6bf29b113f6ea03ad962a7349185ec66bb914
+vendor/lib64/camera/com.qti.sensor.imx586_semco.so|42e5e64d2fada405c3c09ef680e0b6c8523da946
+vendor/lib64/camera/com.qti.sensor.imx586_semco_factory.so|c13acfe91e87da2bede005e87e5beeda8546ce1e
+vendor/lib64/camera/com.qti.sensor.imx586_sunny.so|867c47d8e68bd428da0d11d047129fbf953fa5d6
+vendor/lib64/camera/com.qti.sensor.imx586_sunny_factory.so|11fb255e7fd64d35e4b2b8212a6b2178fce235c0
+vendor/lib64/camera/com.qti.sensor.max7366_6dof.so|3fb52269fbca4a9eb795d1c954584dfe6036467d
+vendor/lib64/camera/com.qti.sensor.max7366_eyetrack.so|7d727125aefaf16d46a8782dc48444b05a8dd9e4
+vendor/lib64/camera/com.qti.sensor.max7366_ov6211.so|7ddfc3e1a32c4f3545f7fe109b580c2187ba2d9f
+vendor/lib64/camera/com.qti.sensor.max7366_ov9282.so|c4f90b1e8093ecc213ee32c58ed6c3e0da1b1ccb
+vendor/lib64/camera/com.qti.sensor.ov12a10.so|36670de1f3bf1012f0eb83d317518b3d088e2074
+vendor/lib64/camera/com.qti.sensor.ov12a10_front.so|4bbd04356c6f11f938bbfb6bbb5318c247a79d5d
+vendor/lib64/camera/com.qti.sensor.ov13855.so|e6348bee523a802498c1b1154cda4fb8302f1087
+vendor/lib64/camera/com.qti.sensor.ov13855_sunny.so|a278c932f1c36a1297cdaf4f6d4e6ee1754b7274
+vendor/lib64/camera/com.qti.sensor.ov13880.so|e83ec907194669536c261f807dfa97f78f8bde5e
+vendor/lib64/camera/com.qti.sensor.ov7251.so|be03e0d9a4d21a8c2cfd4a9cd78773cbc2e26ec0
+vendor/lib64/camera/com.qti.sensor.ov8856.so|da85f495c8db4fb3839bfa1a2c2a9775fccdd9f0
+vendor/lib64/camera/com.qti.sensor.s5k2l7.so|06500e9fe9b2c9cc4d82c340a7f408a201d855d0
+vendor/lib64/camera/com.qti.sensor.s5k2x5sp.so|f7a898021f36ff6fcd0bb9650c52bc2340bfb4b2
+vendor/lib64/camera/com.qti.sensor.s5k5e8.so|1c1216deed85317cadd4fa19e8c3313ca38446c5
+vendor/lib64/camera/com.qti.sensor.s5k5e8_semco.so|424154ba24d8b0911f89f6c3e4eeace641995593
+vendor/lib64/camera/com.qti.sensor.s5k5e8_sunny.so|1acdc3b2eff45b5792b0c07ef6dd561248e73120
+vendor/lib64/camera/com.qti.sensor.s5k5e9yu05.so|72c2af4ddd55591f3815a56f3a6d476d8e7b7cbe
+vendor/lib64/camera/com.qti.sensormodule.altek1_imx577.bin|e8843f278f3a9ad743e53d78304436ff4b76b2d3
+vendor/lib64/camera/com.qti.sensormodule.altek2_imx577.bin|e0a5491bb3375fed8a0cb5e91143aefe10a685af
+vendor/lib64/camera/com.qti.sensormodule.altek_imx577.bin|259482175f633941dd8f7cd2d257e44410a2a5a5
+vendor/lib64/camera/com.qti.sensormodule.liteon_imx318.bin|f6fe4fcd5327264115b51ec9acf5907691fa9ebf
+vendor/lib64/camera/com.qti.sensormodule.liteon_imx362.bin|b97ebb597ec2f651f9f1234fda751f092a3900e4
+vendor/lib64/camera/com.qti.sensormodule.liteon_max7366_6dof.bin|43a659a72c46592c9e4f13ad6743eba9cbc01344
+vendor/lib64/camera/com.qti.sensormodule.liteon_max7366_eyetrack.bin|fef2d7739f19a922b394ae0d948add428c2af6ce
+vendor/lib64/camera/com.qti.sensormodule.liteon_max7366_ov6211.bin|fb9a33e2d4edb8f10e7b72f844b13a7825e06781
+vendor/lib64/camera/com.qti.sensormodule.liteon_max7366_ov9282.bin|8a376a84e3ffc409ce01664267b2cfdd7120018c
+vendor/lib64/camera/com.qti.sensormodule.liteon_ov7251.bin|bb434f2594a75b64b09fbd395c85cd22b3d0ba77
+vendor/lib64/camera/com.qti.sensormodule.ofilm_imx376.bin|4f9e4ff7e90ba1a65304e24d701b875a64a983f6
+vendor/lib64/camera/com.qti.sensormodule.ofilm_imx586.bin|bfc5a9b4885ec333811eba2b0b44aef0c923d42d
+vendor/lib64/camera/com.qti.sensormodule.ofilm_ov12a10.bin|a65e90ccd2a30386bef73ffb3459ceb7f550602a
+vendor/lib64/camera/com.qti.sensormodule.ofilm_ov12a10_front.bin|5c669a537e05f2969ffd0042ed7e4f0b86367481
+vendor/lib64/camera/com.qti.sensormodule.ofilm_ov13855.bin|97394df0916bbf9091eb1926ab55e30983d356f8
+vendor/lib64/camera/com.qti.sensormodule.ofilm_ov13880.bin|caac326d6d22e8dd47728e8b8ac9154192b312f5
+vendor/lib64/camera/com.qti.sensormodule.ofilm_s5k5e8.bin|fac729a9711eb890d405b82ba460a2c52a9a03db
+vendor/lib64/camera/com.qti.sensormodule.pmd_irs1645.bin|a1db79d620ee03a47673f1ec7efed28a2d34856f
+vendor/lib64/camera/com.qti.sensormodule.pmd_irs2381c.bin|af92fc830bcdc45610edfca7b8afe8ba01c827ed
+vendor/lib64/camera/com.qti.sensormodule.semco_imx258.bin|184a77f12ed72bada76bd492c01f9d311439883a
+vendor/lib64/camera/com.qti.sensormodule.semco_imx386.bin|87557f50185f48a6cfd2e05b84b1b01d83003792
+vendor/lib64/camera/com.qti.sensormodule.semco_imx586.bin|65704efcb6c74f3a69bd987b872a055fd0ad092a
+vendor/lib64/camera/com.qti.sensormodule.semco_s5k5e8.bin|fdae2cc48b9cf964c3c6eeade233c931ad8c7c75
+vendor/lib64/camera/com.qti.sensormodule.sony_imx334.bin|e2578ce2394bfe892a01c60232ca3ac11c310cde
+vendor/lib64/camera/com.qti.sensormodule.sunny_imx519.bin|17288deeab000bf32fe08c801161de9d4ae45c62
+vendor/lib64/camera/com.qti.sensormodule.sunny_imx576.bin|e16017babe039c1cbb6374affdad7bfb3d513ac6
+vendor/lib64/camera/com.qti.sensormodule.sunny_imx586.bin|c592c8973aaf6088251d2d51ad0315d114fa0e5f
+vendor/lib64/camera/com.qti.sensormodule.sunny_ov13855.bin|37693780e301f4a8cf11c849778521505f827f6b
+vendor/lib64/camera/com.qti.sensormodule.sunny_ov2281.bin|4eca57460f260cf5c944c268279611f2c12c8b10
+vendor/lib64/camera/com.qti.sensormodule.sunny_s5k2l7.bin|c2a92474c9653e49cddeda4711cfc7fdd363993c
+vendor/lib64/camera/com.qti.sensormodule.sunny_s5k5e8.bin|00c2f607e25bb06f9496ac513ad0640ad3de6d11
+vendor/lib64/camera/com.qti.sensormodule.sunny_s5k5e9yu05.bin|0b8fb84a752cb0f373dabaa04b6eeca84d1d1df3
+vendor/lib64/camera/com.qti.sensormodule.truly_imx476.bin|0632b180e951def9935a1dd4ae93905de1b88c63
+vendor/lib64/camera/com.qti.sensormodule.truly_ov8856.bin|76c0a8aedaa704f00a8e22ac557daddba7e60fa8
+vendor/lib64/camera/com.qti.tuned.altek1_imx577.bin|a900e5a63a7bbe65c9297259f2d58baf84b26aec
+vendor/lib64/camera/com.qti.tuned.altek_imx577.bin|a900e5a63a7bbe65c9297259f2d58baf84b26aec
+vendor/lib64/camera/com.qti.tuned.default.bin|74139fa2ea6935e96015b7166a99300c7df7d335
+vendor/lib64/camera/com.qti.tuned.liteon_imx318.bin|0664b1ec3bd4c3ba599d0d175ec22ae6ef45295d
+vendor/lib64/camera/com.qti.tuned.liteon_imx362.bin|5b2ac629689239616cd19d10089985e87df436ef
+vendor/lib64/camera/com.qti.tuned.liteon_max7366_6dof.bin|b80892c8c4cf86d2e4893d4ef301eb77aed4c9cb
+vendor/lib64/camera/com.qti.tuned.liteon_max7366_eyetrack.bin|b80892c8c4cf86d2e4893d4ef301eb77aed4c9cb
+vendor/lib64/camera/com.qti.tuned.liteon_max7366_ov9282.bin|b80892c8c4cf86d2e4893d4ef301eb77aed4c9cb
+vendor/lib64/camera/com.qti.tuned.liteon_ov7251.bin|341750087d8b24a9ac41facefedb3cb1ca6a2762
+vendor/lib64/camera/com.qti.tuned.ofilm_imx376.bin|8a7fc795efec2b56cae9c8d452acbe23757023c6
+vendor/lib64/camera/com.qti.tuned.ofilm_imx586.bin|af5ce303cb27df353f2b7cfecfac392290d695f8
+vendor/lib64/camera/com.qti.tuned.ofilm_imx586_cn.bin|1d2e905190d3672f73f32c200926a744c07b5018
+vendor/lib64/camera/com.qti.tuned.ofilm_ov12a10.bin|82d332fa3b97f9d4333c8bd10c9e33aa39dab545
+vendor/lib64/camera/com.qti.tuned.ofilm_ov12a10_front.bin|2838373a40c5c82e751fe803f72b0522ac74f4cc
+vendor/lib64/camera/com.qti.tuned.ofilm_ov13855.bin|9dddd402208f843e5800a7431431ed8ef593b4dc
+vendor/lib64/camera/com.qti.tuned.ofilm_ov13855_cn.bin|f5a22bc79eef910231b44b7b75e1d437684137ab
+vendor/lib64/camera/com.qti.tuned.ofilm_ov13880.bin|c007c6f228bd65370c46a8c597ed3e9f484a0c60
+vendor/lib64/camera/com.qti.tuned.ofilm_s5k5e8.bin|6eba8937dfd3084489feef827bb8a277b82ca4a7
+vendor/lib64/camera/com.qti.tuned.semco_imx258.bin|59689c5aaebfdae0f30fcd4172ed5244ee884a7d
+vendor/lib64/camera/com.qti.tuned.semco_imx258_mono.bin|82fbb300b1be63969ab83357112feb50530793d0
+vendor/lib64/camera/com.qti.tuned.semco_imx386.bin|ef8437a0331f6955686145214689c13b23c2af6a
+vendor/lib64/camera/com.qti.tuned.semco_imx481.bin|d165e26f5073a059431aaf68ee36e751f96f55b5
+vendor/lib64/camera/com.qti.tuned.semco_imx586.bin|b1d6cb623a75a54f1b434dbddae86423b5f81447
+vendor/lib64/camera/com.qti.tuned.semco_s5k3m5.bin|fff0747b40ea855c7e7e8ca1dc48572f11a710e9
+vendor/lib64/camera/com.qti.tuned.semco_s5k5e8.bin|6eba8937dfd3084489feef827bb8a277b82ca4a7
+vendor/lib64/camera/com.qti.tuned.sony_imx334.bin|e1fde484f3bbe7cb17e8136676d8fe5a74cd7f10
+vendor/lib64/camera/com.qti.tuned.sunny_imx519.bin|e3a3f108a2e4f98028293713ed3fb65a6de690d2
+vendor/lib64/camera/com.qti.tuned.sunny_imx586.bin|80df6da8a324023f934e2267281594abbf1b5aa3
+vendor/lib64/camera/com.qti.tuned.sunny_imx586_cn.bin|b56691b3a62bf76c3c195d947a2ad83535bea2a2
+vendor/lib64/camera/com.qti.tuned.sunny_ov13855.bin|55ae0871562fd6a7d9e2d17fe7da5f8d7c4f8444
+vendor/lib64/camera/com.qti.tuned.sunny_ov13855_cn.bin|cde12f2aa750622cb6270b514fcb0615b38148e4
+vendor/lib64/camera/com.qti.tuned.sunny_s5k2l7.bin|5c8a845fffdc4b87061bbabd010b609c1106c19f
+vendor/lib64/camera/com.qti.tuned.sunny_s5k5e8.bin|6eba8937dfd3084489feef827bb8a277b82ca4a7
+vendor/lib64/camera/com.qti.tuned.sunny_s5k5e9yu05.bin|d44e95ad01706ec2775b2f9c75cefe725a01e872
+vendor/lib64/camera/com.qti.tuned.truly_ov8856.bin|60bbdbeff24e28f26c735ae9bc81b60e5c317773
+vendor/lib64/camera/fdconfigpreview.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b7144
+vendor/lib64/camera/fdconfigpreviewlite.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b7144
+vendor/lib64/camera/fdconfigvideo.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b7144
+vendor/lib64/camera/fdconfigvideolite.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b7144
+vendor/lib64/hw/camera.qcom.so|eaceff8d8e4ffd24bdd55214cfa1c79f905c11cb
+vendor/lib64/hw/com.qti.chi.override.so|52870d7194191544a8b65a1c341f277c83cd313e
+vendor/lib64/hw/com.qti.chi.override_moorea.so|a6fbeb34b7cb36333fc814b3e6dd17b551402939
+vendor/lib64/libFaceGrade.so|c0cbe46c17f646152d8aa5fac6e8d7f9bbe37a26
+vendor/lib64/libSNPE.so|bdf10f6d7e645d6df02d2fc7b337b71dad5cf636
+vendor/lib64/libVDSuperPhotoAPI.so;DISABLE_CHECKELF|6ab9591dbcf0776037301651fe86253b6c79cd9f
+vendor/lib64/libXMFD_AgeGender.so|1db22d1fdb244072129b3dda02b276128a980fd2
+vendor/lib64/libarcsoft_beautyshot.so|0eeed3ccded6719bb31e37de8f1cf2aedfa4b6ec
+vendor/lib64/libarcsoft_dualcam_refocus.so|ce5e76ae9e9ecc2467c4c4c33144875443ab6393
+vendor/lib64/libarcsoft_high_dynamic_range.so|f6d8b4d4b2fba943bae941c2d38c1bb1b59b6cd3
+vendor/lib64/libarcsoft_portrait_lighting.so|694fd508483ae8c449e931aceb7948c9ed65cf48
+vendor/lib64/libarcsoft_portrait_lighting_c.so|952090941aaf33c4269a53ebbcecd12911add5d7
+vendor/lib64/libarcsoft_supernight.so|f3616941f47c575423307d760852b8f798c4558a
+vendor/lib64/libc++_shared.so|b03bfd1f2be6d63f4a73e08e87849036ae19af49
+vendor/lib64/libcamera_nn_stub.so|f6ed77ad4ab26b7ee4679c8beeb6c618e9a4ebe9
+vendor/lib64/libcamera_scene.so|2dae26abf05951a4010fb1d6b5ab9f76c410ee3f
+vendor/lib64/libcamxfdalgov7.so|937cf18bdcf83a172dda1ecd7218a4ceac4ca316
+vendor/lib64/libcamxfdalgov8.so|50a94995ef4aa5c27a46a7265843baa4a6d64e69
+vendor/lib64/libcamxfdengine.so|a7f24afa4de0c1c7416ada4a29716c376ea8db21
+vendor/lib64/libcamxstatscore.so|b9c97d37c0f31819c201141189d7155d282c71c3
+vendor/lib64/libcamxswprocessalgo.so|667b3326bc13167e37a8d8c833c8e96b3076a67d
+vendor/lib64/libcamxtintlessalgo.so|0a55d44836841015343084eff25d48fbc5d0760c
+vendor/lib64/libcom.qti.chinodeutils.so|e87eaf6b794707e3efeff87ac1c2df3711c965dd
+vendor/lib64/libmibokeh_660.so|4e3d7eb5d4ab6273fcad00a0fcacefc6f3b7ba44
+vendor/lib64/libmmcamera_faceproc.so|9f12fe5b6671fbf4183051e201bda21ed7dc5dbe
+vendor/lib64/libmmcamera_faceproc2.so|3a09ebc6d06a140327c7ca7d506e6196bf0ffe60
+vendor/lib64/libmpbase.so|c098657cb1fab8c8e1f2f7fdffd49ec8ec61fb1c
+vendor/lib64/libswregistrationalgo.so|9ecc3da8cf3e6e29cf7bda463375388a9837c05c
+vendor/lib64/libsymphony-cpu.so|321c1211fa27f17bacd6e1db8a32fd455d98b7a3
+vendor/lib64/libsymphonypower.so|9a82a0acc5862f8a141461ee076223c10c558ef5
+vendor/lib64/libvidhance.so;DISABLE_CHECKELF|2262fd755b332f252b113e2541e2147db441986c
+vendor/lib64/mibokeh_660_opencl.bin|916e133dd818b1cb0161c1d6bab7c9507e680c1f
+
+# Camera Firmware - from violet
+vendor/firmware/CAMERA_ICP.elf|39cc160c9b902101285b8172bf17305fd87defb8
 
 # Charger
 vendor/bin/hvdcp_opti;RECOVERY_AVAILABLE
@@ -127,6 +385,9 @@ vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
+# Consumer IR - from violet
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so;FIX_SONAME|60c43b5dd1e7d020272e75784694ba0c20f03a0c
+
 # Display
 vendor/lib64/libdisp-aba.so
 vendor/lib64/libdisplayqos.so
@@ -189,6 +450,9 @@ vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
+# DRM Widevine L1 - from V12.5.1.0 QFHINXM
+vendor/lib64/liboemcrypto.so|2cee717b25559030a61709e826b4a5dae6043c20
+
 # DSP
 vendor/bin/dspservice
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
@@ -196,12 +460,31 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
+# Fingerprint - from violet
+vendor/lib64/hw/fingerprint.fpc.default.so|a94da96cbecb40c28caeb13222ef0dfd3649c313
+vendor/lib64/hw/fingerprint.goodix.default.so;FIX_SONAME|749f6dc093d71bf15e0fbd9e4e19e1a80c27308e
+vendor/lib64/libgf_ca.so|8d4ddbd1ca3c74895fc231f92622281d81df9824
+vendor/lib64/libgf_hal.so|1c648d334473b17194ee9442b991fc0d1aa00e96
+vendor/lib64/libgoodixhwfingerprint.so|d5a7b22404b48abf44aa5f77c269995dcdb25849
+vendor/lib64/libvendor.goodix.hardware.interfaces.biometrics.fingerprint@2.1.so|397987cae06948d9745a47b03e84d57ea6ab9fbe
+
 # FM
 system_ext/lib64/fm_helium.so
 system_ext/lib64/libfm-hci.so
 system_ext/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor
+
+# GPU Firmware - from violet
+vendor/firmware/a612_rgmu.bin|cb8705d5bc417e53863ed16ab0bed2fc1489646f
+vendor/firmware/a612_zap.b00|1b3d61c7fcc70440a7fa3dd022fd0d2962a5a738
+vendor/firmware/a612_zap.b01|9989bdca9f329bd3bd6f435edb6a19347edb8c28
+vendor/firmware/a612_zap.b02|64f072cfbeca18d407d69a6bab8780174986b013
+vendor/firmware/a612_zap.elf|75249e2de83b5e382c7ba3ce61fa58b5e7dda7f9
+vendor/firmware/a612_zap.mdt|7910a81b6ed3b4ac9411d1706c023b7b90a2eb85
+
+# GPU Firmware - from Redmi Note 10 Pro V14.0.1.0.TKFMIXM
+vendor/firmware/a630_sqe.fw|6526cbb24d614dd67dc18e3c80d5c4374a0b3f63
 
 # Graphics
 vendor/lib/egl/eglSubDriverAndroid.so
@@ -335,6 +618,15 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 
 # IPA
 vendor/etc/init/ipa_fws.rc
+
+# IPA Firmware - from violet
+vendor/firmware/ipa_fws.b00|278ffc604de52ef3850efbe400a8e09bbf648e8b
+vendor/firmware/ipa_fws.b01|eedb7f63819749a40f59e762d8778eb8e8dccd8e
+vendor/firmware/ipa_fws.b02|01bd1f4d5e1dc8ae7239a4a0506ed9d45b8eb000
+vendor/firmware/ipa_fws.b03|c07cfef57f8f694b4cee41e78700614efbedf2bc
+vendor/firmware/ipa_fws.b04|e3552692a635dceca369cab6d9349091b669c80a
+vendor/firmware/ipa_fws.elf|c3a91098d20f50e15ec643bb3d33e0e91c2efa50
+vendor/firmware/ipa_fws.mdt|ccbadf5f93a9763c307d4922a94b5b6288399736
 
 # IRQ balance
 vendor/bin/msm_irqbalance
@@ -510,12 +802,136 @@ vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql|9a76d5747da28
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql|f6c7e947859f56312e687cba70082ce143821351
 vendor/radio/qcril_database/upgrade/9_version_update_ecc_table_127531.sql|3629f96ea40e6c4051da9387d62129c057e5c94b
 
+# Sensors - from violet
+vendor/bin/hw/android.hardware.sensors@2.0-service|963eb920c10add12f208bf8c425ef7a917824427
+vendor/bin/sensors.qti|13fb3476e006a8cfc06a62cb5782528faa7cc191
+vendor/etc/init/android.hardware.sensors@2.0-service.rc|fa05945722ec39d08bb752d17a05758be0a1688f
+vendor/etc/sensors/hals.conf|bf3677cbfa5ce5735662e8c259cb027969f65c87
+vendor/lib64/android.hardware.sensors@2.0-impl.so|dbe0fc9e1f2b0b8d60b490ec014c6ec852f28e94
+vendor/lib64/libsensorcal.so|963fc6d530c37c992483be9d6194ef41a7d8ada4
+vendor/lib64/libsensorslog.so|0868f92ec18390498f130dcfe51b4ac5038464b4
+vendor/lib64/libsns_device_mode_stub.so|360917a1963b5d3f466fa72b94818d11ba1d5c37
+vendor/lib64/libsns_fastRPC_util.so;DISABLE_CHECKELF|f727a463742bccc9c5208d45555e3dc8ec3c7aa1
+vendor/lib64/libsns_low_lat_stream_stub.so;DISABLE_CHECKELF|3c170e8e78a6691e1015d5204488cfa1cb17530f
+vendor/lib64/libsnsapi.so|460bff4aa922cf4570549b68a9b656f5bf018a3a
+vendor/lib64/libsnsdiaglog.so|33e3a82273890a6661948b526a57b6d52a65d7ac
+vendor/lib64/libssc.so|3abbe4e5a8215bcfbcbdf5d5b57c9ff8671bdbbd
+vendor/lib64/libssc_default_listener.so|71c4f6feef87826eee1843dbbb971204ecc3ab7a
+vendor/lib64/sensors.ssc.so|0b0de9902c17f55cf7e8cf4f9ec3b07d84942631
+
+# Sensor Configs - from violet
+vendor/etc/sensors/config/ak991x_dri_0.json|78da13d50f3d253bc9aa3303ba6fad2d080772b9
+vendor/etc/sensors/config/bma2x2_0.json|ade42e46f121fc66e4027ddbcfda7cee7a8db79d
+vendor/etc/sensors/config/bme680_0.json|705b4a8f07886177512ec41bcb4f31f45c1a2eaf
+vendor/etc/sensors/config/bmg160_0.json|6d6f895ecda4133b337356a3e5f9bdd65016f66d
+vendor/etc/sensors/config/bmi160_0.json|e21a7c25ace73012093f6b1e067dba74736facd0
+vendor/etc/sensors/config/bmm150_0.json|96544c58d135e5e760fde0447b48292a8ca9a76c
+vendor/etc/sensors/config/bmp285_0.json|73d2fe7e4cb7b56959b90f221fb509bf7af6f8dc
+vendor/etc/sensors/config/bu52053nvx_0.json|2b103a25bb7fd546c6727f1a2cfb813794b8e255
+vendor/etc/sensors/config/cm3526_0.json|0e71bbdb93f4e58e372c7854ae6518c4eb2f67f9
+vendor/etc/sensors/config/default_sensors.json|2f819b9c24bda47c516782eccb7dd20c3d7483ab
+vendor/etc/sensors/config/dps368_0.json|5113a02c588c3b85e0720df29f87c75d0651079f
+vendor/etc/sensors/config/icp101xx_0.json|658c06edcbaaf822acaa01408f57041c73443830
+vendor/etc/sensors/config/lsm6ds3_0.json|4e039e50d892680e3c24c2109833e8a013f1b678
+vendor/etc/sensors/config/lsm6ds3c_0.json|e8de7bd7336f3260af8045ac26d5ed082080fa0d
+vendor/etc/sensors/config/lsm6dsm_0.json|46bde17eb75f940bc62fd56776418231e6659579
+vendor/etc/sensors/config/lsm6dsm_0_16g.json|1c1fa6a9ce680371c74361aee94f178b08328fb7
+vendor/etc/sensors/config/lsm6dsm_0_8g.json|087ca760ea8056635ade48246acc42b3755a9b12
+vendor/etc/sensors/config/lsm6dso_0.json|dba52e2ff3fac1a3e73301852bd46887d3808ae3
+vendor/etc/sensors/config/lsm6dso_0_16g.json|4d67bfcfae03dff909c7c20a5763b45bbd1a3492
+vendor/etc/sensors/config/lsm6dso_0_8g.json|8fad39c8bfa206fc94abf5eedecb8b88d2a7d707
+vendor/etc/sensors/config/lsm6dso_1.json|349b776e0b4e1052e9abecb4a30ef262d36429e7
+vendor/etc/sensors/config/lsm6dso_1_16g.json|4444917b6006e6532a2baa592d515db8cea2e2af
+vendor/etc/sensors/config/lsm6dso_1_8g.json|75e93aa524d71a87943fbb23fbd1cf5b22621010
+vendor/etc/sensors/config/ltr308_0_on_change.json|a1f9a35f8e0615a9da4a56b40c3edfd53a4a3497
+vendor/etc/sensors/config/pah_8011_0_platform.ppg_enable_ex_1.json|dbad0467bffd1f86b99699a39a4f8bddf5cd82a0
+vendor/etc/sensors/config/pah_8011_0_platform.ppg_enable_ex_2.json|45b4172ce831cfd98d734e3c05d61d2b1a7c57fb
+vendor/etc/sensors/config/rpr0521rs_0.json|5f0239ca9b41be1768757a25ceb47d17b3c97395
+vendor/etc/sensors/config/sdmmagpie_ak991x_0.json|0e0abc5ca058949182be4df5021da7c60b91a39e
+vendor/etc/sensors/config/sdmmagpie_bmp285_0.json|6264cc62bb69a5ba0b6538bbfbed6f2ca6c7d922
+vendor/etc/sensors/config/sdmmagpie_bu52053nvx_0.json|fab7570bddd2d7d199a0bbd0981a8bcff1ab8922
+vendor/etc/sensors/config/sdmmagpie_default_sensors.json|c72d8b2fb5ab61fad2e69dde300a39702b544c3b
+vendor/etc/sensors/config/sdmmagpie_lsm6dso_0.json|a329a452043aedd02de95b11e638167bdfb9b729
+vendor/etc/sensors/config/sdmmagpie_lsm6dso_1.json|8ecdf7da9b284b807a9ac5dd9d6878da2e86fa1c
+vendor/etc/sensors/config/sdmmagpie_power_0.json|f6cbf36d14aef3c186f83070799da8d49a4bf378
+vendor/etc/sensors/config/sdmmagpie_qrd_ak991x_0.json|be4e5c9f0afbb61364deb44766c5f38737043d61
+vendor/etc/sensors/config/sdmmagpie_qrd_lsm6dso_0.json|258a538ccd002be59d4e90cc992d92b908d439c2
+vendor/etc/sensors/config/sdmmagpie_qrd_tmd2725.json|9e162b5fb5731ddc541b042709d1c4c66c83a999
+vendor/etc/sensors/config/sdmmagpie_tmd2725.json|4bacbccbc98ac0e464a565412d72a9d262453fdb
+vendor/etc/sensors/config/shtw2_0.json|dcb4a61570b63949693b48daedffdeea1fe84b1c
+vendor/etc/sensors/config/sns_amd.json|4fb338c8f4653e9890a277bfd76269958156dfb7
+vendor/etc/sensors/config/sns_amd_sw_disabled.json|7c077f907224ed18b1f0b8d0f0a636ce2f3547ea
+vendor/etc/sensors/config/sns_amd_sw_enabled.json|fdbb02f839237405b600849a05fdaf4aaaeb0faa
+vendor/etc/sensors/config/sns_aont.json|8c7018f39ae756a3ee14d859be18eeb1753ee75b
+vendor/etc/sensors/config/sns_basic_gestures.json|c3772758a7dc11c8c294452c18845f56b044ed35
+vendor/etc/sensors/config/sns_bring_to_ear.json|1c9429636a9a7fd5c548cf91229fb7dae4d8437f
+vendor/etc/sensors/config/sns_ccd.json|7a5a365228d2182c148970f51fc8ec06b28822f3
+vendor/etc/sensors/config/sns_ccd_v2_walk.json|b4a87487bcc3ab769313b6e21e3100f043466b18
+vendor/etc/sensors/config/sns_ccd_v3_walk.json|2684c4decfe5631a5a4e016d00c0c0f04c3252ed
+vendor/etc/sensors/config/sns_cm.json|9654c52ec50b311ff4f9183ebf8e0dc70d3ae20a
+vendor/etc/sensors/config/sns_dae.json|9e0858f4dda5e498afc25ca49f88c3567b2951b2
+vendor/etc/sensors/config/sns_device_orient.json|6daeff5c12d7c686c4a2f5bacf5e28e5da681fdc
+vendor/etc/sensors/config/sns_diag_filter.json|5ced3613ac38c94a63300006b5528e8d22ad7d23
+vendor/etc/sensors/config/sns_distance_bound.json|47ba44cac87879aad730909a7d4a5f2b3b0acc3d
+vendor/etc/sensors/config/sns_dpc.json|6161edb1de42ab91da69524c9a50da194deebc95
+vendor/etc/sensors/config/sns_facing.json|e4bb856a7943bc5382c18ea716819a05369254be
+vendor/etc/sensors/config/sns_fmv.json|56ffc51067bec079e4be58e1ab00d6c867e08716
+vendor/etc/sensors/config/sns_geomag_rv.json|5df0e6fda20c8c47d3bde140c16a9d398294ebe1
+vendor/etc/sensors/config/sns_gyro_cal.json|5e23682a88950eb3695da06773e8caf60f526794
+vendor/etc/sensors/config/sns_heart_rate.json|67edc0201c01d0808787eb1ea497dcdf277d7513
+vendor/etc/sensors/config/sns_mag_cal.json|9abe9e1c895bb182b8f200f4aa7829e654fddc7e
+vendor/etc/sensors/config/sns_mag_cal_legacy.json|2a2cd2ee02f763be0a018a8bff93669cf1fbc5a1
+vendor/etc/sensors/config/sns_multishake.json|dd20e9f32906572504c737b6d7f4f55a09ab3384
+vendor/etc/sensors/config/sns_pedometer.json|a2a1222f8b91d4daed92d5e3b3018a65d667184a
+vendor/etc/sensors/config/sns_rmd.json|e283dcc772a3708dbe6e223f117dc3f3dda4dfad
+vendor/etc/sensors/config/sns_rotv.json|9a65491c80f94d71f7c56159dc1987e996c88eb5
+vendor/etc/sensors/config/sns_smd.json|55a90d505b02e70c39ea9e85275b68382160bbd8
+vendor/etc/sensors/config/sns_tilt.json|f841ff922ea7294aae708fb91200fabdd355ac6f
+vendor/etc/sensors/config/sns_tilt_sw_disabled.json|4f7b5e618a4a1ca8f64fa74494c7ccd2411b58d7
+vendor/etc/sensors/config/sns_tilt_sw_enabled.json|43f57ebdcbfcbd2e03b9e3172f18a9d896500962
+vendor/etc/sensors/config/sns_tilt_to_wake.json|f1f8d0fe79fc5adf5881651cc54773fd99cc124c
+vendor/etc/sensors/config/sns_wrist_pedo.json|078bbc91b4bde41ad214ee81276485e657245a26
+vendor/etc/sensors/config/stk3x3x_0.json|6666312b2796e28ab65a689f50491e8157f49145
+vendor/etc/sensors/config/sx932x_0.json|46cb77f05e029b19864d9d53e9e1f86b1d1911e1
+vendor/etc/sensors/config/talos_ak991x_0.json|de3666bc552a2542f32647783879cc513d676d45
+vendor/etc/sensors/config/talos_bmp285_0.json|3728809ea60650b7f96801d885f8f59dd0dc22b3
+vendor/etc/sensors/config/talos_bu52053nvx_0.json|1410493098feeecf4daaeb10b4e3e6e1add02dcb
+vendor/etc/sensors/config/talos_default_sensors.json|37f20a8a2ff1c6c98f4321ce3655e4e06491393c
+vendor/etc/sensors/config/talos_irq.json|410d82e39ea83691f6587946b835b1219b02fe7b
+vendor/etc/sensors/config/talos_lsm6ds3c_0.json|24e029eb8ef48a0dd953ffd3c202709e69f93c95
+vendor/etc/sensors/config/talos_lsm6dso_0.json|8269602b1c8ccc565d5afb7437515e79ea6b572b
+vendor/etc/sensors/config/talos_power_0.json|735c67dcd1302e62bc71190f9fbff338b0a7cd6a
+vendor/etc/sensors/config/talos_qrd_ak991x_0.json|cc5c76812254112340b5f22ca5fa67efcaeafab3
+vendor/etc/sensors/config/talos_qrd_lsm6dso_0.json|1e683bd1b4e2c10d23e53cf29fe1081c02d4dcc9
+vendor/etc/sensors/config/talos_stk3x3x_0.json|33985368a3653f07a50359f17a3409284e9e4716
+vendor/etc/sensors/config/talos_tmd2725.json|271270a8c95a67d4afadb76b953f2a739ed4232d
+vendor/etc/sensors/config/talos_tmx4903.json|b85f4ef728290cbb55c1f79c14fba82d501c9b6e
+vendor/etc/sensors/config/tmd2725.json|1e55bf96820e7caea00e5600c26e9e1d2531d9ee
+vendor/etc/sensors/config/tmx4903.json|eb5cbc4c03acd7a3930c21b80dc3b27119917324
+vendor/etc/sensors/sns_reg_config|891e6e552b64c29b61744dd53ea373ea0ce0aa40
+
 # Soter
 vendor/app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
+
+# Thermal - from violet
+vendor/lib64/libthermalclient.so|84072e150722cc668320f07a75cb8695ce1a79b0
+
+# Thermal Engine - from violet
+vendor/bin/thermal-engine|c28ef899f1f00b44106f782c76a9f330daaf1e69
+vendor/etc/thermal-engine-camera.conf|cf1f3e513c431920108d0d51e5133f03f36ab6e6
+vendor/etc/thermal-engine-high.conf|0a6bd08eab3128b21674f43f15f99ea0415c6ff7
+vendor/etc/thermal-engine-map.conf|b7ecee933855db667951773231e5c0d70d7bee39
+vendor/etc/thermal-engine-normal.conf|cb2f6aaa3e06dfa84695b0df6dec4745ade0d2b6
+vendor/etc/thermal-engine-pubgmhd.conf|0a6bd08eab3128b21674f43f15f99ea0415c6ff7
+vendor/etc/thermal-engine-sgame.conf|0a6bd08eab3128b21674f43f15f99ea0415c6ff7
+vendor/etc/thermal-engine-studio.conf|ab49b1a7241fd56b5f72dac4348e607a9c872d2f
+vendor/etc/thermal-engine-tgame.conf|0a6bd08eab3128b21674f43f15f99ea0415c6ff7
+vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
+vendor/lib64/libthermalfeature.so|1c408911610e5b6a11853aff1900860f9e9a861f
 
 # Time
 vendor/app/TimeService/TimeService.apk
@@ -545,7 +961,7 @@ system_ext/lib64/libwfddisplayconfig.so|27f5d6e284edf05cc7776e5be010912973000ab9
 system_ext/lib64/libwfdmminterface.so|8d3d493fef797aef2feaab4e09e50250ddf5dc9a
 system_ext/lib64/libwfdmmsink.so|4569ce9941eb5d06db599146ed80b8a32d7cd97f
 system_ext/lib64/libwfdmmsrc_system.so|0cc970954800566baddbf760b153b027940180f5
-system_ext/lib64/libwfdnative.so;SYMLINK=system_ext/priv-app/WfdService/lib/arm64/libwfdnative.so|9513bbbd813dd05fb063d3c9e72640a1bc9156c2|f2918bbd8e4c691299e840863e8cb502a47bb773
+system_ext/lib64/libwfdnative.so;SYMLINK=system_ext/priv-app/WfdService/lib/arm64/libwfdnative.so|f2918bbd8e4c691299e840863e8cb502a47bb773
 system_ext/lib64/libwfdrtsp.so|1ab4fc5b75d25f551df3593d5856e6f7893a4176
 system_ext/lib64/libwfdservice.so|af0e31f17ed997a5d8bad64cdad486be28cb9f07
 system_ext/lib64/libwfdsinksm.so|cc899b719fa11d844c65908d7fdc18600451324d
