@@ -24,7 +24,7 @@ GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies
 GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
 PERF_GOV_SUPPORTED := true
 PERF_DEFAULT_GOV := schedutil
-TARGET_ENABLE_BLUR := true
+TARGET_ENABLE_BLUR := false
 LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
 
 # Device identifier. This must come after all inclusions.
