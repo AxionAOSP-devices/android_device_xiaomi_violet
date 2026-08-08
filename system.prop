@@ -17,6 +17,9 @@ persist.sys.fuse.passthrough.enable=true
 ro.config.low_ram=false
 ro.lmk.log_stats=true
 
+# Kawase2 Render Engine Blur Algorithm
+debug.renderengine.blur_algorithm=kawase2
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
