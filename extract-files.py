@@ -71,7 +71,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libdemangle.so'),
     'vendor/lib64/camera/components/com.vidhance.node.eis.so':
         blob_fixup().add_needed('libdemangle.so')
-                    .add_needed('libcomparetf2_shim.so'),
+                    .add_needed('libcomparetf2_shim.so')
+                    .replace_needed('libui.so', 'libui-v34.so'),
     'vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so':
         blob_fixup().add_needed('libcomparetf2_shim.so'),
     'vendor/lib64/camera/components/com.qti.node.xiaomigenderage.so': blob_fixup()

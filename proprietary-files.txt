@@ -157,7 +157,7 @@ vendor/lib64/camera/components/com.qtistatic.stats.aec.so|768f3a8fbd84c3a2855389
 vendor/lib64/camera/components/com.qtistatic.stats.af.so|853939da18d8d6bfecaf40165995087fdda85bbe
 vendor/lib64/camera/components/com.qtistatic.stats.awb.so|e7ae03bad22d78f366780a63c15d014832e80e50
 vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so|3376705c9ead359aa09cf303431f8dea1d21ed67
-vendor/lib64/camera/components/com.vidhance.node.eis.so|79d91c632894f7c4cf9def51cee428d640250315
+vendor/lib64/camera/components/com.vidhance.node.eis.so|07e80ed9ebff8c4e2ae969fd8003a07aaf058e3d
 vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so|86b3683a043b22b098662c4e1029ea9a325194e6
 vendor/lib64/camera/components/com.xiaomi.node.mibokeh.so|30c61b777cf4fb01168197befc0faa4c94698523
 vendor/lib64/camera/components/com.xiaomi.node.misegment.so|596de7a416bbd9c34ad4141522897c743707cfec
